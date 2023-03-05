@@ -6,6 +6,7 @@ import React ,{useState} from 'react'
 function App() {
     let array = ["https://vocal.media/education/what-is-full-stack-developer",
                "https://vocal.media/education/how-to-become-a-front-end-developer-3qi45n0gkr",
+               "https://vocal.media/families/a-tale-of-space-repair-and-friendship-de4cmr0nuh",
                "https://vocal.media/horror/the-mystery-of-the-haunted-house-a-spooky-adventure-for-brave-kids",
                "https://vocal.media/horror/the-mystery-of-the-haunted-house-a-spooky-adventure-for-brave-kids-chapter-2",
                "https://vocal.media/horror/the-mystery-of-the-haunted-house-a-spooky-adventure-for-brave-kids-chapter-3",
