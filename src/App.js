@@ -29,7 +29,7 @@ function App() {
 const viewdata =(data)=>{
   
               
-             if(add <= 8){
+             if(add <= 9){
              setUrl(array[add]);  
              add++;          
                }
