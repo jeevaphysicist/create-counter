@@ -15,7 +15,12 @@ function App() {
               "https://vocal.media/horror/the-mystery-of-the-haunted-house-a-spooky-adventure-for-brave-kids-chapter-6",
               "https://vocal.media/horror/the-mystery-of-the-haunted-house-a-spooky-adventure-for-brave-kids-chapter-7-the-treasure-hunt",
               "https://vocal.media/poets/chasing-the-north-star-s-light",
-              "https://vocal.media/futurism/the-academy-of-magic-eliza-s-journey-to-becoming-a-witch"
+              "https://vocal.media/futurism/the-academy-of-magic-eliza-s-journey-to-becoming-a-witch",
+              "https://youtube.com/shorts/fbJ8JaBSgZ0?feature=share",
+              "https://youtube.com/shorts/JllJ476ofD4?feature=share",
+              "https://youtube.com/shorts/DBIA_fuNiiQ?feature=share",
+              "https://youtube.com/shorts/eTF5hRBNoIE?feature=share",
+              "https://youtube.com/shorts/7WryE9VkGr4?feature=share"
               ];
   const [count,setCount]= useState(0);
   const [url,setUrl] = useState(array[0]);
