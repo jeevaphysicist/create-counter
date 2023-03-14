@@ -115,18 +115,88 @@ function App() {
               //  "https://vocal.media/journal/ponniyin-selvan-1-fresh-floods-chapter-10-the-astrologer-of-kudandhai",
               //  "https://vocal.media/journal/ponniyin-selvan-fresh-floods-chapter-4-the-kadambur-palace"
               ];
+
+              const [count,setCount]= useState(0);
+              const [url,setUrl] = useState(urls[0]);
+              const [hours,setHours]= useState("");
+              const [min,setMin]= useState("");
+              const [sec,setSec]= useState("");
+              const [ampm,setampm]= useState("");
+              const [on,setOn] = useState(false);
+              const [button,setButton] = useState(false);
+            
+                          // console.log("array",array);
+                         
+            const viewdata =(data)=>{
+              
+                          
+                         if(add <= 8){
+                         setUrl(urls[add]);  
+                         add++;          
+                           }
+                           else{
+                             add = 0 ;
+                           }
+                          }
+            const handleclick = ()=>{
+              setButton(true);
+              setOn(true);
+              if(count === 0){
+            
+                                setTimeout(viewdata,30000);
+            }
+                                setInterval(viewdata,30000);
+              }
+            
+              
+            
+            setInterval(()=>{
+            
+            
+            var hh = new Date().getHours();
+            var mm = new Date().getMinutes();
+            var ss = new Date().getSeconds();
+            var am =(hh>=12)?"PM":"AM";
+            setampm(am);
+            
+            //convert 24 UST to 12 UST
+            if(hh>=12){
+              hh=hh-12;
+            }
+            
+               hh = (hh<10)?'0'+hh : hh;
+               mm = (mm<10)?'0'+mm : mm;
+               ss = (ss<10)?'0'+ss : ss;
+               setHours(hh);
+               setMin(mm);
+               setSec(ss);
+            })
+            
+            ;
  
 
   
   
   return (
     <div>
-           <button style={{color:"white",fontWeight:"bolder",fontSize:"20px",padding:"5px", backgroundColor:'red',border:"none"}}>
+           {/* <button style={{color:"white",fontWeight:"bolder",fontSize:"20px",padding:"5px", backgroundColor:'red',border:"none"}}>
                Please Wait 50 seconds to start work
            </button>
-           <UrlOpener urls={urls} />
-           {/* <Countalgorithm/> */}
+           <UrlOpener urls={urls} /> */}
+
+           <Countalgorithm/>
     </div>
+  //   <div className="App">
+
+  //   <button className='button' onClick={()=>{handleclick()}} disabled={button} style={{color:"white",border:"2px solid transparent"
+  //                                                ,backgroundColor:"red",fontWeight:"bolder",fontSize:'25px'
+  //                                                 ,borderRadius:'7px',padding:'5px',marginLeft:"30%",marginTop:'30px',cursor:"pointer"}}>
+  //      click me see a magic
+  //   </button><br/><br/>
+  //   &nbsp; &nbsp; &nbsp; &nbsp;{on ? <span style={{marginLeft:"30%",fontSize:'30px',fontWeight:"bolder",}}>{hours}:{min}:{sec}</span>:""}
+  //   <br/>
+  //    <iframe style={{height:"90vh",width:"100%"}} src="https://dear-viewer.onrender.com" title="description"></iframe>
+  // </div>
    
   );
 }
