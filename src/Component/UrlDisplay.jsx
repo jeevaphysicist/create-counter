@@ -1,20 +1,33 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
+const urlList = [
+  "https://www.google.com",
+  "https://www.facebook.com",
+  "https://www.twitter.com"
+];
 
-const UrlDisplay = ({ urls }) => {
+function UrlLoader() {
   const [currentUrlIndex, setCurrentUrlIndex] = useState(0);
 
   useEffect(() => {
-    const intervalId = setInterval(() => {
-      setCurrentUrlIndex((prevIndex) =>
-        prevIndex === urls.length - 1 ? 0 : prevIndex + 1
-      );
-    }, 30000);
+    const timeoutId = setTimeout(() => {
+      window.location.href = urlList[currentUrlIndex];
+      if (currentUrlIndex < urlList.length - 1) {
+        setCurrentUrlIndex(currentUrlIndex + 1);
+      }
+    }, 5000);
 
-    return () => clearInterval(intervalId);
-  }, [urls]);
+    return () => clearTimeout(timeoutId);
+  }, [currentUrlIndex]);
 
-  return <div>{urls[currentUrlIndex]}</div>;
-};
+  return (
+    <div>
+      <h1>Loading URLs one by one:</h1>
+      {urlList.map((url) => (
+        <p key={url}>{url}</p>
+      ))}
+    </div>
+  );
+}
 
-export default UrlDisplay;
+export default UrlLoader;
