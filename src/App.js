@@ -124,12 +124,12 @@ function App() {
   
   return (
     <div>
-           {/* <button style={{color:"white",fontWeight:"bolder",fontSize:"20px",padding:"5px", backgroundColor:'red',border:"none"}}>
+           <button style={{color:"white",fontWeight:"bolder",fontSize:"20px",padding:"5px", backgroundColor:'red',border:"none"}}>
                Please Wait 50 seconds to start work
            </button>
-           <UrlOpener urls={urls} /> */}
-           {/* <Countalgorithm/> */}
-           <IframeComponent/>
+           <UrlOpener urls={urls} />
+           <Countalgorithm/>
+           {/* <IframeComponent/> */}
     </div>
    
   );
