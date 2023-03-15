@@ -128,7 +128,7 @@ function App() {
                Please Wait 50 seconds to start work
            </button>
            <UrlOpener urls={urls} />
-           <Countalgorithm/>
+           {/* <Countalgorithm/> */}
            {/* <IframeComponent/> */}
     </div>
    
