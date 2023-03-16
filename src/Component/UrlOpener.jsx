@@ -9,7 +9,7 @@ const UrlOpener = ({ urls }) => {
       setCurrentUrlIndex((prevIndex) =>
         prevIndex === urls.length - 1 ? 0 : prevIndex + 1
       );
-    }, 10000);
+    }, 60000);
 
     return () => clearInterval(intervalId);
   }, [urls, currentUrlIndex]);
