@@ -1,33 +1,33 @@
-import React, { useEffect, useState } from "react";
+import { useRef, useEffect } from "react";
 
-const urlList = [
-  "https://www.google.com",
-  "https://www.facebook.com",
-  "https://www.twitter.com"
-];
-
-function UrlLoader() {
-  const [currentUrlIndex, setCurrentUrlIndex] = useState(0);
+function AutoScrollIframe({ src }) {
+  const iframeRef = useRef(null);
 
   useEffect(() => {
-    const timeoutId = setTimeout(() => {
-      window.location.href = urlList[currentUrlIndex];
-      if (currentUrlIndex < urlList.length - 1) {
-        setCurrentUrlIndex(currentUrlIndex + 1);
+    const iframe = iframeRef.current;
+    if (!iframe) return;
+
+    const scrollInterval = setInterval(() => {
+      const contentHeight = iframe.contentWindow.document.body.scrollHeight;
+      const scrollPosition = iframe.contentWindow.pageYOffset;
+      const targetPosition = contentHeight / 2;
+
+      if (scrollPosition < targetPosition) {
+        iframe.contentWindow.scrollBy(0, 1);
+      } else {
+        clearInterval(scrollInterval);
       }
-    }, 5000);
+    }, 10);
+    console.log("first",iframe);
+    return () => {
+      clearInterval(scrollInterval);
+    };
 
-    return () => clearTimeout(timeoutId);
-  }, [currentUrlIndex]);
+  }, [iframeRef]);
 
-  return (
-    <div>
-      <h1>Loading URLs one by one:</h1>
-      {urlList.map((url) => (
-        <p key={url}>{url}</p>
-      ))}
-    </div>
-  );
+  return <iframe src="https://vocal.media/horror/the-mystery-of-the-haunted-house-a-spooky-adventure-for-brave-kids" ref={iframeRef} />;
 }
 
-export default UrlLoader;
+
+
+export default AutoScrollIframe ;

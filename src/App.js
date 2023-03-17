@@ -8,6 +8,7 @@ import IframeComponent from './Component/UrlDisplay';
 
 function App() {
     let urls = [
+                  //  "https://yo.fan/p/hcX1I0lq7jU"
                 // "https://vocal.media/horror/the-mystery-of-the-haunted-house-a-spooky-adventure-for-brave-kids",
                 // "https://vocal.media/education/what-is-full-stack-developer",
                 // "https://vocal.media/education/how-to-become-a-front-end-developer-3qi45n0gkr",
@@ -127,9 +128,9 @@ function App() {
            <button style={{color:"white",fontWeight:"bolder",fontSize:"20px",padding:"5px", backgroundColor:'red',border:"none"}}>
                Please Wait 50 seconds to start work
            </button>
-           <UrlOpener urls={urls} />
+           {/* <UrlOpener urls={urls} /> */}
            {/* <Countalgorithm/> */}
-           {/* <IframeComponent/> */}
+           <IframeComponent/>
     </div>
    
   );

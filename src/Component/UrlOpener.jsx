@@ -9,12 +9,13 @@ const UrlOpener = ({ urls }) => {
       setCurrentUrlIndex((prevIndex) =>
         prevIndex === urls.length - 1 ? 0 : prevIndex + 1
       );
-    }, 60000);
+    }, 1000);
 
     return () => clearInterval(intervalId);
   }, [urls, currentUrlIndex]);
 
   return null;
 };
+
 
 export default UrlOpener;
