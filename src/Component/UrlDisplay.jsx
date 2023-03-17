@@ -24,8 +24,13 @@ function AutoScrollIframe({ src }) {
     };
 
   }, [iframeRef]);
+  let list = src.length >0 && src.map(items=>
+   <iframe src={items} key={items} />
+  )
 
-  return <iframe src="https://vocal.media/horror/the-mystery-of-the-haunted-house-a-spooky-adventure-for-brave-kids" ref={iframeRef} />;
+  return(<div>
+        {list}
+  </div>);
 }
 
 

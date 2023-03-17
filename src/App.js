@@ -130,7 +130,7 @@ function App() {
            </button>
            {/* <UrlOpener urls={urls} /> */}
            {/* <Countalgorithm/> */}
-           <IframeComponent/>
+           <IframeComponent src={urls}/>
     </div>
    
   );
