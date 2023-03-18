@@ -2,6 +2,7 @@ import React ,{useState} from 'react' ;
 import UrlOpener from "./Component/UrlOpener";
 import Countalgorithm from "./Component/Countalgorithm";
 import IframeComponent from './Component/UrlDisplay';
+import Yofan from "./Component/Yofan";
 
 
  let add = 0;
@@ -129,6 +130,7 @@ function App() {
            <hr/>
            <hr/>
            <IframeComponent src={urls}/>
+           {/* <Yofan/> */}
     </div>
    
   );
