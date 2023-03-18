@@ -24,11 +24,11 @@ function AutoScrollIframe({ src }) {
     };
 
   }, [iframeRef]);
-  let list = src.length >0 && src.map(items=>
-   <iframe src={items} key={items} />
+  let list = src.length >0 && src.map(items=><div className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 my-3 text-center" key={items}><iframe src={items} style={{height:"500px"}}/></div>
+   
   )
 
-  return(<div>
+  return(<div className="row container-fluid mx-auto">
         {list}
   </div>);
 }

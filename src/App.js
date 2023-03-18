@@ -125,11 +125,9 @@ function App() {
   
   return (
     <div>
-           <button style={{color:"white",fontWeight:"bolder",fontSize:"20px",padding:"5px", backgroundColor:'red',border:"none"}}>
-               Please Wait 50 seconds to start work
-           </button>
-           {/* <UrlOpener urls={urls} /> */}
-           {/* <Countalgorithm/> */}
+          <h1>Create view Just Scroll half of the page the mini website shown below</h1>
+           <hr/>
+           <hr/>
            <IframeComponent src={urls}/>
     </div>
    
