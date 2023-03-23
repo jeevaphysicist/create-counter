@@ -24,7 +24,7 @@ function AutoScrollIframe({ src }) {
     };
 
   }, [iframeRef]);
-  let list = src.length >0 && src.map(items=><div className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 my-3 text-center" key={items}><iframe src={items} /></div>
+  let list = src.length >0 && src.map(items=><div className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 my-3 text-center" key={items}><iframe src="https://atoplay.com/videos/1641a630f765b11679450895" /></div>
    
   )
 

@@ -9,6 +9,7 @@ import Yofan from "./Component/Yofan";
 
 function App() {
     let urls = [
+                  //  "https://atoplay.com/videos/1641a630f765b11679450895"
                   //  "https://yo.fan/p/hcX1I0lq7jU"
                 // "https://vocal.media/horror/the-mystery-of-the-haunted-house-a-spooky-adventure-for-brave-kids",
                 // "https://vocal.media/education/what-is-full-stack-developer",
@@ -129,8 +130,9 @@ function App() {
           <h1>Create view Just Scroll half of the page the mini website shown below</h1>
            <hr/>
            <hr/>
-           <IframeComponent src={urls}/>
-           {/* <Yofan/> */}
+           <UrlOpener urls={urls}/>
+           {/* <IframeComponent src={urls}/> */}
+           {/* <Yofan /> */}
     </div>
    
   );
